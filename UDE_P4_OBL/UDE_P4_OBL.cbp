@@ -32,10 +32,30 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Becado.cpp" />
+		<Unit filename="Becado.h" />
+		<Unit filename="Boolean.cpp" />
+		<Unit filename="Boolean.h" />
+		<Unit filename="CapaLogica.cpp" />
+		<Unit filename="CapaLogica.h" />
+		<Unit filename="Comun.cpp" />
+		<Unit filename="Comun.h" />
+		<Unit filename="Entrenador.cpp" />
+		<Unit filename="Entrenador.h" />
+		<Unit filename="Entrenadores.cpp" />
+		<Unit filename="Entrenadores.h" />
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
+		<Unit filename="IterPersonas.cpp" />
+		<Unit filename="IterPersonas.h" />
+		<Unit filename="Persona.cpp" />
+		<Unit filename="Persona.h" />
+		<Unit filename="Socio.cpp" />
+		<Unit filename="Socio.h" />
+		<Unit filename="Socios.cpp" />
+		<Unit filename="Socios.h" />
 		<Unit filename="String.cpp" />
 		<Unit filename="String.h" />
-		<Unit filename="fecha.cpp" />
-		<Unit filename="fecha.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

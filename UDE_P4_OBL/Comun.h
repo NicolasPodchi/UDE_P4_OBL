@@ -1,0 +1,6 @@
+#ifndef COMUN_H_INCLUDED
+#define COMUN_H_INCLUDED
+
+
+
+#endif // COMUN_H_INCLUDED

@@ -7,9 +7,12 @@ private:
     long int CI;
     String Nombre;
 public :
-     Persona (long int, String);
-     String getNombre ();
-     long int getCedula();
+    Persona ();
+    Persona (long int, String);
+    Persona (const Persona &);
+    String getNombre ();
+    long int getCedula();
+
 
 };
 

@@ -13,4 +13,12 @@
      {
          return CI;
      }
+Persona :: Persona(const Persona &p)
+{
+    CI=p.CI;
+    Nombre=p.Nombre;
+}
+Persona:: Persona ()
+{
 
+}

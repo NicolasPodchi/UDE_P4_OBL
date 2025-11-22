@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\becado.cpp
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\boolean.cpp
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\capalogica.cpp
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\comun.cpp
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\entrenador.cpp
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\entrenadores.cpp
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\fecha.cpp
+	"fecha.h"
+
+1763817833 c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\fecha.h
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\iterpersonas.cpp
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\main.cpp
+	<iostream>
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\socio.cpp
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\socios.cpp
+
+1763817833 source:c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\string.cpp
+	"String.h"
+	<string.h>
+	<iostream>
+
+1763817833 c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\string.h
+	<string.h>
+	<iostream>
+

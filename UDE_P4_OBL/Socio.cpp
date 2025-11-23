@@ -17,7 +17,7 @@ String  Socio :: getDomicilio()
     return domicilio;
 }
 
-Entrenador Socio :: getEntrenador()
+Entrenador * Socio :: getEntrenador()
 {
     return entrenador;
 }

@@ -15,7 +15,7 @@ private:
 public:
     CapaLogica();
     void registrarEntrenador(Entrenador, tipoError &);
-    void registrarSocio(Socio *, tipoError &);
+    void registrarSocio(Socio *, long int cedulaEntrenador, tipoError &);
     IterPersonas listarEntrenadores(tipoError & );
     IterPersonas listarSocios();
     Socio * devolverSocio(long int, tipoError &);

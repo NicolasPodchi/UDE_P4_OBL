@@ -5,9 +5,17 @@
 
 using namespace std;
 
-void procesarAltas(Entrenadores dicEntrenadores, Socios dicSocios)
+void procesarAltas(CapaLogica capaLogica)
 {
     int opcionAltas;
+
+    long int cedula;
+    int anio;
+    String nombre;
+    float cuotaBase;
+    float salario;
+    String domicilio;
+    long int cedulaEntrenador;
 
     do
     {
@@ -18,13 +26,42 @@ void procesarAltas(Entrenadores dicEntrenadores, Socios dicSocios)
         switch(opcionAltas)
         {
         case 1:
-
             printf(":: CREAR ENTRENADOR ::\n\n");
+            printf("Ingrese los datos del nuevo entrenador:\n\n");
+
+            printf("Cedula: ");
+            scanf("%ld", &cedula);
+
+            printf("\nNombre: ");
+            nombre.scan();
+
+            printf("\nAnio comienzo: ");
+            scanf("%d", &anio);
+
+            printf("\nSalario: ");
+            scanf("%f", &salario);
 
             system("pause");
             break;
         case 2:
             printf(":: CREAR SOCIO ::\n\n");
+
+            printf("Ingrese los datos del nuevo socio:");
+
+            printf("Cedula: ");
+            scanf("%ld", &cedula);
+
+            printf("Nombre: ");
+            nombre.scan();
+
+            printf("Cuota: ");
+            scanf("%f", &cuotaBase);
+
+            printf("Domicilio: ");
+            domicilio.scan();
+
+            printf("Cedula Entrenador: ");
+            scanf("%ld", &cedulaEntrenador);
 
             system("pause");
 
@@ -42,7 +79,7 @@ void procesarAltas(Entrenadores dicEntrenadores, Socios dicSocios)
     while (opcionAltas != 0);
 }
 
-void procesarListados(Entrenadores dicEntrenadores, Socios dicSocios)
+void procesarListados(CapaLogica capaLogica)
 {
     int opcionListados;
 
@@ -79,7 +116,7 @@ void procesarListados(Entrenadores dicEntrenadores, Socios dicSocios)
     while (opcionListados != 0);
 }
 
-void procesarConsultas(Entrenadores dicEntrenadores, Socios dicSocios)
+void procesarConsultas(CapaLogica capaLogica)
 {
     int opcionConsultas;
 
@@ -98,31 +135,31 @@ void procesarConsultas(Entrenadores dicEntrenadores, Socios dicSocios)
             system("pause");
             break;
         case 2:
-             printf(":: CALCULAR CUOTA MENSUAL PARA SOCIO ::\n\n");/*consultar cuota mensual de un socio por cedula y mes*/
+            printf(":: CALCULAR CUOTA MENSUAL PARA SOCIO ::\n\n");/*consultar cuota mensual de un socio por cedula y mes*/
 
 
             system("pause");
             break;
         case 3:
-             printf(":: CALCULAR TOTAL DE INGRESOS POR MES ::\n\n");/*Calcular monto total por mes*/
+            printf(":: CALCULAR TOTAL DE INGRESOS POR MES ::\n\n");/*Calcular monto total por mes*/
 
 
             system("pause");
             break;
         case 4:
-             printf(":: CANTIDAD DE BECADOS POR FECHA ::\n\n");/*Contar cantidad becados con fechaOtorgada mayor a una fecha dada*/
+            printf(":: CANTIDAD DE BECADOS POR FECHA ::\n\n");/*Contar cantidad becados con fechaOtorgada mayor a una fecha dada*/
 
 
             system("pause");
             break;
         case 5:
-             printf(":: CANTIDAD DE ENTRENADORES POR FECHA Y PROMEDIO DE SALARIOS ::\n\n");/*Dado un anio, contar entrenadores que ingresaron luego de esa fecha y calcular el salario promedio de todos ellos.*/
+            printf(":: CANTIDAD DE ENTRENADORES POR FECHA Y PROMEDIO DE SALARIOS ::\n\n");/*Dado un anio, contar entrenadores que ingresaron luego de esa fecha y calcular el salario promedio de todos ellos.*/
 
 
             system("pause");
             break;
         case 6:
-             printf(":: SOCIO CON CUOTA MAS ALTA POR MES ::\n\n");/*Dado un mes, consultar en detalle el socio con la cuota mas alta*/
+            printf(":: SOCIO CON CUOTA MAS ALTA POR MES ::\n\n");/*Dado un mes, consultar en detalle el socio con la cuota mas alta*/
 
 
             system("pause");
@@ -142,13 +179,7 @@ void procesarConsultas(Entrenadores dicEntrenadores, Socios dicSocios)
 
 int main()
 {
-    Entrenadores dicEntrenadores;
-    Socios dicSocios;
-
-    /*INGRESO DE JUGADORES*/
-    //data_Jugadores(dicc); // DATOS DE PRUEBA
-
-    //procesarIngresoJugadores(dicc);
+    CapaLogica capaLogica;
 
     /*MENU*/
     int opcion;
@@ -161,15 +192,15 @@ int main()
         {
         case 1:
             /*ALTAS*/
-            procesarAltas(dicEntrenadores, dicSocios);
+            procesarAltas(capaLogica);
             break;
         case 2:
             /*LISTADOS*/
-            procesarListados(dicEntrenadores, dicSocios);
+            procesarListados(capaLogica);
             break;
         case 3:
             /*CONSULTAS*/
-            procesarConsultas(dicEntrenadores, dicSocios);
+            procesarConsultas(capaLogica);
             break;
         case 0:
             /*SALIR*/

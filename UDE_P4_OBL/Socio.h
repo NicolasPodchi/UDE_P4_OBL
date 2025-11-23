@@ -7,13 +7,13 @@ class Socio: public Persona
 private:
     float cuotaBase;
     String domicilio;
-    Entrenador entrenador;
+    Entrenador * entrenador;
 
 public:
     Socio (long int, String, String, float, Entrenador);
     float getCuota();
     String getDomicilio();
-    Entrenador getEntrenador();
+    Entrenador * getEntrenador();
     virtual String tipoSocio() = 0;
 
     virtual float calcularCuotaTotal(int);

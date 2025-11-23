@@ -26,3 +26,7 @@ float Socio ::  calcularCuotaTotal(int mes)
 {
     return 0;
 }
+
+void Socio :: mostrar()
+{
+}

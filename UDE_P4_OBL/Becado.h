@@ -15,6 +15,9 @@ public:
     int getPorcentaje();
     Fecha getFechaOtorgada();
     String tipoSocio();
+
+    float calcularCuotaTotal(int);
+    void mostrar();
 };
 
 #endif // BECADO_H_INCLUDED

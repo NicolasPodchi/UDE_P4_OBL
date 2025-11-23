@@ -21,3 +21,12 @@ String Becado :: tipoSocio()
     String tipo("becado");
     return tipo;
 }
+
+float Becado :: calcularCuotaTotal(int)
+{
+    return 0;
+}
+
+void Becado :: mostrar()
+{
+}

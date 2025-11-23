@@ -14,6 +14,8 @@ public :
     Persona (const Persona &);
     String getNombre();
     long int getCedula();
+
+    virtual void mostrar();
 };
 
 #endif // PERSONA_H_INCLUDED

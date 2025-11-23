@@ -1,4 +1,6 @@
+#pragma once
 #include "Persona.h"
+
 class Entrenador: public Persona
 {
 
@@ -12,4 +14,6 @@ public:
     Entrenador (const Entrenador &);
     float getSalario();
     int getAnio();
+
+    void mostrar();
 };

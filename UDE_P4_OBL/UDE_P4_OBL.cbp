@@ -48,6 +48,8 @@
 		<Unit filename="Fecha.h" />
 		<Unit filename="IterPersonas.cpp" />
 		<Unit filename="IterPersonas.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
 		<Unit filename="Persona.cpp" />
 		<Unit filename="Persona.h" />
 		<Unit filename="Socio.cpp" />
@@ -57,6 +59,7 @@
 		<Unit filename="String.cpp" />
 		<Unit filename="String.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="tipoError.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

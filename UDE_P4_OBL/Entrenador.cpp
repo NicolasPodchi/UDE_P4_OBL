@@ -27,3 +27,7 @@ int Entrenador :: getAnio()
     return anioComienzo;
 }
 
+void Entrenador :: mostrar()
+{
+}
+

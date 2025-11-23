@@ -15,3 +15,12 @@ String Comun :: tipoSocio()
     String tipo("comun");
     return tipo;
 }
+
+float Comun :: calcularCuotaTotal(int)
+{
+    return 0;
+}
+
+void Comun :: mostrar()
+{
+}

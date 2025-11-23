@@ -12,5 +12,8 @@ public:
     Comun (long int, String, String, float,Entrenador, float);
     float getExtra ();
     String tipoSocio();
+
+    float calcularCuotaTotal(int);
+    void mostrar();
 };
 #endif // COMUN_H_INCLUDED

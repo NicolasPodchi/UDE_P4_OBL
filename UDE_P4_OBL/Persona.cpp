@@ -26,3 +26,7 @@ long int Persona :: getCedula()
 {
     return cedula;
 }
+
+void Persona :: mostrar()
+{
+}

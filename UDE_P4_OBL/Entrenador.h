@@ -1,13 +1,15 @@
 #include "Persona.h"
 class Entrenador: public Persona
 {
+
 private:
-    float Salario;
-    int AnioComienzo;
+    float salario;
+    int anioComienzo;
+
 public:
-        Entrenador();
-        Entrenador(long int, String,float,int);
-        Entrenador (const Entrenador &);
-        float getSalario();
-        int GetAnio();
+    Entrenador();
+    Entrenador(long int, String,float,int);
+    Entrenador (const Entrenador &);
+    float getSalario();
+    int getAnio();
 };

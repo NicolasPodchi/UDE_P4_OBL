@@ -1,20 +1,28 @@
-
 #include"Socio.h"
-    Socio::Socio (long int cedula, String nombre, String domicilio, float cuota, Entrenador Ent): Persona(cedula,nombre)
-    {
-        Domicilio=domicilio;
-        CuotaBase=cuota;
-        EntrenadorAsignado=Ent;
-    }
- float Socio::  getCuota()
+
+Socio::Socio (long int cedula, String nombre, String domicilio, float cuota, Entrenador entrenador): Persona(cedula, nombre)
 {
-    return CuotaBase;
+    domicilio=domicilio;
+    cuotaBase=cuota;
+    entrenador=entrenador;
 }
-String  Socio ::getDomicilio()
+
+float Socio ::  getCuota()
 {
-    return Domicilio;
+    return cuotaBase;
 }
+
+String  Socio :: getDomicilio()
+{
+    return domicilio;
+}
+
 Entrenador Socio :: getEntrenador()
 {
-    return EntrenadorAsignado;
+    return entrenador;
+}
+
+float Socio ::  calcularCuotaTotal(int mes)
+{
+    return 0;
 }

@@ -4,16 +4,17 @@
 class Socio: public Persona
 {
 private:
-    float CuotaBase;
-    String Domicilio;
-    Entrenador EntrenadorAsignado;
+    float cuotaBase;
+    String domicilio;
+    Entrenador entrenador;
+
 public:
     Socio (long int, String, String, float, Entrenador);
+    float getCuota();
     String getDomicilio();
     Entrenador getEntrenador();
-    virtual float getCuota();
     virtual String tipoSocio() = 0;
 
-
+    virtual float calcularCuotaTotal(int);
 };
 #endif // SOCIO_H_INCLUDED

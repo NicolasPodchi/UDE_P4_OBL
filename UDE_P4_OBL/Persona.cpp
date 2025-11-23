@@ -1,24 +1,28 @@
 #include "Persona.h"
 
- Persona:: Persona (long int n, String s)
-{
-    CI=n;
-    Nombre=s;
-}
-     String Persona::  getNombre ()
-     {
-         return Nombre;
-     }
-     long int Persona:: getCedula()
-     {
-         return CI;
-     }
-Persona :: Persona(const Persona &p)
-{
-    CI=p.CI;
-    Nombre=p.Nombre;
-}
 Persona:: Persona ()
 {
 
+}
+
+Persona:: Persona (long int c, String n)
+{
+    cedula=c;
+    nombre=n;
+}
+
+Persona :: Persona(const Persona &p)
+{
+    cedula = p.cedula;
+    nombre = p.nombre;
+}
+
+String Persona ::  getNombre ()
+{
+    return nombre;
+}
+
+long int Persona :: getCedula()
+{
+    return cedula;
 }

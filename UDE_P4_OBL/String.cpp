@@ -10,7 +10,6 @@ String :: String ()
     cadena[0] = '\0';
 }
 
-
 String :: String (char * cad)
 {
     int largo = strlen(cad);
@@ -18,7 +17,6 @@ String :: String (char * cad)
     strcpy(cadena,cad);
 
 }
-
 
 String :: String (const String &otro)
 {
@@ -31,6 +29,7 @@ String :: ~String ()
 {
     delete [] cadena;
 }
+
 bool String :: operator== (String otro)
 {
     return (strcmp(cadena, otro.cadena) == 0);
@@ -80,6 +79,7 @@ void String :: scan()
     strcpy(cadena,aux);
 
 }
+
 void String :: print()
 {
     cout << cadena;

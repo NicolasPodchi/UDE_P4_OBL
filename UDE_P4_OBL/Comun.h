@@ -5,16 +5,12 @@
 class Comun: public Socio
 {
 private:
-    float Extra;
+    float extra;
 
 public:
-//    virtual float getCuota();
-//    virtual String tipoSocio();
     Comun ();
-    Comun (long int, String,String , float,Entrenador, float);
+    Comun (long int, String, String, float,Entrenador, float);
     float getExtra ();
-
-
-
+    String tipoSocio();
 };
 #endif // COMUN_H_INCLUDED

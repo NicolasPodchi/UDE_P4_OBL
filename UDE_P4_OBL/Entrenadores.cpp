@@ -86,30 +86,30 @@ void Entrenadores :: destruirLista(Nodo * &L)
     L = aux;
 }
 
-Boolean Entrenadores :: member (Entrenadores e, long int ci)
+Boolean Entrenadores :: member (long int ci)
 {
     int cubeta = dispersion(ci);
-    return perteneceLista(e.Hash[cubeta], ci);
+    return perteneceLista(Hash[cubeta], ci);
 }
 
 //Precondición: el elemento a insertar no es miembro del diccionario.
-void Entrenadores::Insert (Entrenadores &d, Entrenador e)
+void Entrenadores::Insert (Entrenador e)
 {
     long int clave = e.getCedula();
     int cubeta = dispersion(clave);
-    insFront(d.Hash[cubeta], e);
+    insFront(Hash[cubeta], e);
 }
 
 //Precondición: el elemento es miembro del diccionario.
-Entrenador Entrenadores :: Find (Entrenadores e, long int ci)
+Entrenador Entrenadores :: Find (long int ci)
 {
     int cubeta = dispersion(ci);
-    return obtenerEnLista(e.Hash[cubeta],ci);
+    return obtenerEnLista(Hash[cubeta], ci);
 }
 
 //Precondición: el elemento es miembro del diccionario.
-void Entrenadores :: Delete (Entrenadores &d, long int ci)
+void Entrenadores :: Delete (long int ci)
 {
     int cubeta = dispersion(ci);
-    borrarEnLista(d.Hash[cubeta], ci);
+    borrarEnLista(Hash[cubeta], ci);
 }

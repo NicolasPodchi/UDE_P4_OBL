@@ -10,6 +10,7 @@ private:
 public:
     Comun ();
     Comun (long int, String, String, float,Entrenador, float);
+    Comun (long int, String, String, float, float);
     float getExtra ();
     String tipoSocio();
 

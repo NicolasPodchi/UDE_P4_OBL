@@ -66,6 +66,8 @@ String String :: operator+(String otro)
 void String :: scan()
 {
     char aux [MAX];
+
+    cin.ignore();
     char c = cin.get();
     int i = 0;
     while(i<MAX && c!='\n')

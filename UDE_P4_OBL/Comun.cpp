@@ -5,6 +5,11 @@ Comun :: Comun (long int ci, String nombre, String domicilio, float cuota, Entre
     extra=extra;
 }
 
+Comun :: Comun (long int ci, String nombre, String domicilio, float cuota, float extra): Socio(ci,nombre,domicilio,cuota)
+{
+    extra=extra;
+}
+
 float Comun ::  getExtra ()
 {
     return extra;

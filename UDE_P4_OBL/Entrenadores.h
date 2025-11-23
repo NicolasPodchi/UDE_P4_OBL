@@ -34,16 +34,16 @@ public:
 
     ~Entrenadores();
 
-    Boolean member(Entrenadores, long int);
+    Boolean member(long int);
 
     //Precondición: el elemento a insertar no es miembro del diccionario.
-    void Insert(Entrenadores &, Entrenador);
+    void Insert(Entrenador);
 
     //Precondición: el elemento es miembro del diccionario.
-    Entrenador Find(Entrenadores, long int);
+    Entrenador Find(long int);
 
     //Precondición: el elemento es miembro del diccionario.
-    void Delete(Entrenadores &, long int);
+    void Delete(long int);
 };
 
 #endif // ENTRENADORES_H_INCLUDED

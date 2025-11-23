@@ -6,6 +6,12 @@ Becado:: Becado (long int ci, String nombre, String domicilio, float cuota, Entr
     fechaOtorgada=fechaOtorgada;
 }
 
+Becado:: Becado (long int ci, String nombre, String domicilio, float cuota, int porcentaje, Fecha fechaOtorgada): Socio(ci,nombre,domicilio,cuota)
+{
+    porcentaje=porcentaje;
+    fechaOtorgada=fechaOtorgada;
+}
+
 int Becado ::  getPorcentaje ()
 {
     return porcentaje;

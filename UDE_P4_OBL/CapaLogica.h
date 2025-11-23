@@ -4,6 +4,8 @@
 #include "tipoError.h"
 #include "Fecha.h"
 #include "Socios.h"
+#include "Comun.h"
+#include "Becado.h"
 #include "Entrenadores.h"
 
 class CapaLogica
@@ -17,7 +19,7 @@ public:
     void registrarEntrenador(Entrenador, tipoError &);
     void registrarSocio(Socio *, long int cedulaEntrenador, tipoError &);
     IterPersonas listarEntrenadores(tipoError & );
-    IterPersonas listarSocios();
+    void listarSocios(IterPersonas &);
     Socio * devolverSocio(long int, tipoError &);
     float calcularCuotaSocio(int, tipoError &);
     float calcularCuotasTodos(int);

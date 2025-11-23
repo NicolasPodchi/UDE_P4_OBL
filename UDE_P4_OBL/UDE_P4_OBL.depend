@@ -52,22 +52,22 @@
 1763834581 c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\comun.h
 	"Socio.h"
 
-1763922491 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\becado.cpp
+1763925551 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\becado.cpp
 	"Becado.h"
 
 1763912733 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\boolean.cpp
 	"Boolean.h"
 
-1763920809 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\capalogica.cpp
+1763930047 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\capalogica.cpp
 	"CapaLogica.h"
 
-1763922491 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\comun.cpp
+1763925385 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\comun.cpp
 	"Comun.h"
 
-1763922393 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\comun.h
+1763925494 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\comun.h
 	"Socio.h"
 
-1763924175 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socio.h
+1763925310 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socio.h
 	"Entrenador.h"
 
 1763922419 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\entrenador.h
@@ -83,7 +83,7 @@
 1763922491 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\entrenador.cpp
 	"Entrenador.h"
 
-1763916131 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\entrenadores.cpp
+1763926584 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\entrenadores.cpp
 	"Entrenadores.h"
 
 1763512410 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\fecha.cpp
@@ -94,18 +94,18 @@
 1763914784 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\iterpersonas.cpp
 	"IterPersonas.h"
 
-1763923950 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\main.cpp
+1763930012 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\main.cpp
 	<iostream>
 	"Menu.h"
 	"CapaLogica.h"
 
-1763924157 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socio.cpp
+1763924371 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socio.cpp
 	"Socio.h"
 
-1763914868 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socios.cpp
+1763929521 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socios.cpp
 	"Socios.h"
 
-1763854202 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\string.cpp
+1763928869 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\string.cpp
 	"String.h"
 	<string.h>
 	<iostream>
@@ -113,14 +113,14 @@
 1763922491 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\persona.cpp
 	"Persona.h"
 
-1763922400 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\becado.h
+1763925525 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\becado.h
 	"Fecha.h"
 	"Socio.h"
 
 1763912798 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\boolean.h
 	<cstdio>
 
-1763916084 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\entrenadores.h
+1763926446 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\entrenadores.h
 	"Entrenador.h"
 	"IterPersonas.h"
 
@@ -128,7 +128,7 @@
 	"Persona.h"
 	"Boolean.h"
 
-1763920025 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socios.h
+1763929558 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socios.h
 	"Socio.h"
 	"IterPersonas.h"
 
@@ -138,11 +138,13 @@
 
 1763917901 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\menu.h
 
-1763924097 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\capalogica.h
+1763929187 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\capalogica.h
 	"tipoError.h"
 	"Fecha.h"
 	"Socios.h"
+	"Comun.h"
+	"Becado.h"
 	"Entrenadores.h"
 
-1763920674 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\tipoerror.h
+1763928187 c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\tipoerror.h
 

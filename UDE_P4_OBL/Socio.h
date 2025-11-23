@@ -1,5 +1,7 @@
 #ifndef SOCIO_H_INCLUDED
 #define SOCIO_H_INCLUDED
+
+#pragma once
 #include "Entrenador.h"
 
 class Socio: public Persona
@@ -11,6 +13,7 @@ private:
 
 public:
     Socio (long int, String, String, float, Entrenador);
+    Socio (long int, String, String, float);
     float getCuota();
     String getDomicilio();
     Entrenador * getEntrenador();

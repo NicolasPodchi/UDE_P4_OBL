@@ -19,7 +19,7 @@ private:
     Boolean perteneceArbol (Nodo *, long int);
     void insertarEnArbol (Nodo * &, Socio *);
     Socio * obtenerEnArbol (Nodo *, long int);
-    void cargarIterador (Nodo *, IterPersonas&);
+    void cargarIterador (Nodo *, IterPersonas &);
 
 public:
     Socios();

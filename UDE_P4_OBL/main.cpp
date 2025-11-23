@@ -7,15 +7,26 @@ using namespace std;
 
 void procesarAltas(CapaLogica capaLogica)
 {
+    tipoError error = ok;
+
     int opcionAltas;
 
     long int cedula;
-    int anio;
     String nombre;
     float cuotaBase;
+    float extra;
     float salario;
     String domicilio;
     long int cedulaEntrenador;
+    int tipoSocio;
+    int porcentaje;
+
+    int dia;
+    int mes;
+    int anio;
+    Fecha fechaOtorgada;
+
+    Socio * nuevoSocio;
 
     do
     {
@@ -26,46 +37,117 @@ void procesarAltas(CapaLogica capaLogica)
         switch(opcionAltas)
         {
         case 1:
+        {
             printf(":: CREAR ENTRENADOR ::\n\n");
             printf("Ingrese los datos del nuevo entrenador:\n\n");
-
-            printf("Cedula: ");
-            scanf("%ld", &cedula);
-
-            printf("\nNombre: ");
-            nombre.scan();
-
-            printf("\nAnio comienzo: ");
-            scanf("%d", &anio);
-
-            printf("\nSalario: ");
-            scanf("%f", &salario);
-
-            system("pause");
-            break;
-        case 2:
-            printf(":: CREAR SOCIO ::\n\n");
-
-            printf("Ingrese los datos del nuevo socio:");
-
             printf("Cedula: ");
             scanf("%ld", &cedula);
 
             printf("Nombre: ");
             nombre.scan();
 
-            printf("Cuota: ");
-            scanf("%f", &cuotaBase);
+            printf("Anio comienzo: ");
+            scanf("%d", &anio);
 
-            printf("Domicilio: ");
-            domicilio.scan();
+            printf("Salario: ");
+            scanf("%f", &salario);
 
-            printf("Cedula Entrenador: ");
-            scanf("%ld", &cedulaEntrenador);
+            Entrenador e(cedula, nombre, salario, anio);
+
+            capaLogica.registrarEntrenador(e,error);
+            switch(error)
+            {
+            case ok:
+                printf("\nEntrenador ingresado con exito\n\n");
+                break;
+
+            case YaExisteSocio:
+                printf("La cédula ingresada ya está registrada para un socio\n\n");
+                break;
+
+            case YaExisteEntrenador:
+                printf("La cédula ingresada ya está registrada para un entrenador\n\n");
+                break;
+
+            }
 
             system("pause");
-
             break;
+        }
+        case 2:
+        {
+            printf(":: CREAR SOCIO ::\n\n");
+
+            do
+            {
+                printf("Ingrese los datos del nuevo socio:");
+
+                printf("Cedula: ");
+                scanf("%ld", &cedula);
+
+                printf("Nombre: ");
+                nombre.scan();
+
+                printf("Cuota: ");
+                scanf("%f", &cuotaBase);
+
+                printf("Domicilio: ");
+                domicilio.scan();
+
+                printf("Cedula Entrenador: ");
+                scanf("%ld", &cedulaEntrenador);
+
+                printf("Socio Común (1: SI / 2: NO): ");
+                scanf("%d", &tipoSocio);
+
+                if(tipoSocio == 1) // comun
+                {
+                    printf("Extra: ");
+                    scanf("%f", &extra);
+
+                    nuevoSocio = new Comun(cedula, nombre, domicilio, cuotaBase, extra);
+                }
+                else // becado
+                {
+                    printf("Porcentaje Beca: ");
+                    scanf("%d", &porcentaje);
+
+                    printf("Dia: ");
+                    scanf("%d", &dia);
+
+                    printf("Mes: ");
+                    scanf("%d", &mes);
+
+                    printf("Anio: ");
+                    scanf("%d", &anio);
+
+                    Fecha fechaOtorgada(dia, mes, anio);
+
+                    nuevoSocio = new Becado(cedula, nombre, domicilio, cuotaBase, porcentaje, fechaOtorgada);
+                }
+
+                capaLogica.registrarSocio(nuevoSocio, cedulaEntrenador, error);
+
+                if(error == ok)
+                    printf("Socio registrado con éxito");
+                else if(error == YaExisteSocio)
+                    printf("El socio que intenta registrar ya existe");
+                else if(error == NoExisteEntrenador)
+                    printf("No existe un entrenador para la cedula ingresada");
+                else if(error == CuotaSocioNegativa)
+                    printf("El valor de la cuota base no puede ser negativo");
+                else if(error == ExtraSocioComunNegativo)
+                    printf("El valor de la cuota extra no puede ser negativo");
+                else if(error == PorcentajBecadoNegativo)
+                    printf("El porcentaje de beca no puede ser negativo");
+                else if(error == FechaInvalida)
+                    printf("La fecha ingresada no es válida");
+            }
+            while(error != ok);
+
+            system("pause");
+        }
+        break;
         case 0:
             /*VOLVER*/
             break;
@@ -83,6 +165,8 @@ void procesarListados(CapaLogica capaLogica)
 {
     int opcionListados;
 
+    IterPersonas iter;
+
     do
     {
         system("cls");
@@ -98,11 +182,19 @@ void procesarListados(CapaLogica capaLogica)
             system("pause");
             break;
         case 2:
+        {
             printf(":: LISTADO DE SOCIOS ::\n\n");
+            capaLogica.listarSocios(iter);
 
+            while(iter.hayMasPersonas() == TRUE)
+            {
+                Persona * personaMostrar = iter.proximaPersona();
+                personaMostrar -> mostrar();
+            }
             system("pause");
 
             break;
+        }
         case 0:
             /*VOLVER*/
             break;

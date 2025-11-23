@@ -7,6 +7,13 @@ Socio::Socio (long int cedula, String nombre, String domicilio, float cuota, Ent
     entrenador=entrenador;
 }
 
+Socio::Socio (long int cedula, String nombre, String domicilio, float cuota): Persona(cedula, nombre)
+{
+    domicilio=domicilio;
+    cuotaBase=cuota;
+    entrenador=NULL;
+}
+
 float Socio ::  getCuota()
 {
     return cuotaBase;

@@ -68,8 +68,9 @@ void CapaLogica :: registrarSocio(Socio * nuevoSocio, long int cedulaEntrenador,
     }
 }
 
-IterPersonas CapaLogica :: listarEntrenadores(tipoError & )
+IterPersonas CapaLogica :: listarEntrenadores(IterPersonas &iter)
 {
+    diccEntrenadores.listarEntrenadores(iter);
 }
 
 void CapaLogica :: listarSocios(IterPersonas & iter)

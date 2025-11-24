@@ -18,7 +18,7 @@ public:
     CapaLogica();
     void registrarEntrenador(Entrenador, tipoError &);
     void registrarSocio(Socio *, long int cedulaEntrenador, tipoError &);
-    IterPersonas listarEntrenadores(tipoError & );
+    IterPersonas listarEntrenadores(IterPersonas &);
     void listarSocios(IterPersonas &);
     Socio * devolverSocio(long int, tipoError &);
     float calcularCuotaSocio(int, tipoError &);

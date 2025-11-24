@@ -113,3 +113,20 @@ void Entrenadores :: Delete (long int ci)
     int cubeta = dispersion(ci);
     borrarEnLista(Hash[cubeta], ci);
 }
+
+void Entrenadores :: cargarIteradorLista (Nodo * l, IterPersonas &iter)
+{
+    while(l!=NULL)
+    {
+        iter.insertar(new Entrenador(l->e));
+    }
+}
+
+IterPersonas Entrenadores :: listarEntrenadores(IterPersonas &iter)
+{
+    for(int i = 0; i<B ; i++)
+    {
+        cargarIteradorLista(Hash[i], iter);
+    }
+}
+

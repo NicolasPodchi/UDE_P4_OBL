@@ -29,6 +29,10 @@ private:
     void borrarEnLista (Nodo * &l, int clave);
 
     void destruirLista(Nodo * &);
+
+    void cargarIteradorLista (Nodo *, IterPersonas &);
+
+
 public:
     Entrenadores();
 
@@ -44,6 +48,8 @@ public:
 
     //Precondición: el elemento es miembro del diccionario.
     void Delete(long int);
+
+    IterPersonas listarEntrenadores(IterPersonas &);
 };
 
 #endif // ENTRENADORES_H_INCLUDED

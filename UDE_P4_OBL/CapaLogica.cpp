@@ -88,7 +88,24 @@ Socio * CapaLogica :: devolverSocio(long int cedula, tipoError &error)
 }
 
 float CapaLogica :: calcularCuotaSocio(int, tipoError &) {}
-float CapaLogica :: calcularCuotasTodos(int) {}
+
+
+float CapaLogica :: calcularCuotasTodos(int mes)
+{
+    return diccSocios.montoTotalCuotasMes(mes);
+}
 int CapaLogica :: cuantosBecadosDesdeFecha(Fecha) {}
 void CapaLogica :: cuantosEntrenadoresYPromedioSalario(Fecha, int &, float &) {}
-Socio * CapaLogica :: socioCuotaMayor(int, tipoError &) {}
+
+void CapaLogica :: socioCuotaMayor(int mes, tipoError &error, Socio * &s)
+{
+    if(diccSocios.Empty() == TRUE)
+    {
+        error = NoHaySocios;
+    }
+    else
+    {
+        s = diccSocios.socioCuotaMayor(mes);
+        error = ok;
+    }
+}

@@ -40,7 +40,6 @@ void Socio :: setEntrenador(Entrenador * entrenadorAsignar)
 
 float Socio ::  calcularCuotaTotal(int mes)
 {
-    return 0;
 }
 
 void Socio :: mostrarBasico()
@@ -49,6 +48,7 @@ void Socio :: mostrarBasico()
 
     printf("Tipo: ");
     tipoSocio().print();
+    printf("\n");
 }
 
 void Socio :: mostrar()
@@ -59,7 +59,7 @@ void Socio :: mostrar()
     domicilio.print();
     printf(" | ");
 
-    printf("Cuota Base: %f", cuotaBase);
+    printf("Cuota Base: %.2f", cuotaBase);
     printf(" | ");
 
     printf("Entrenador: ");

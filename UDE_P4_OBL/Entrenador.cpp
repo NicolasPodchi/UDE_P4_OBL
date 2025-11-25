@@ -31,12 +31,11 @@ void Entrenador :: mostrar()
 {
     Persona :: mostrar();
 
-    printf("Salario: %f", salario);
+    printf("Salario: %.2f", salario);
     printf(" | ");
 
-    printf("Año ingreso: %d", anioComienzo);
+    printf("Anio ingreso: %d", anioComienzo);
 
-    printf("\n\n");
 }
 
 void Entrenador :: mostrarBasico()

@@ -25,7 +25,7 @@ public:
     float calcularCuotasTodos(int);
     int cuantosBecadosDesdeFecha(Fecha);
     void cuantosEntrenadoresYPromedioSalario(Fecha, int &, float &);
-    Socio * socioCuotaMayor(int, tipoError &);
+    void socioCuotaMayor(int, tipoError &, Socio * &);
 };
 
 

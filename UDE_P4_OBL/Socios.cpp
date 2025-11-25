@@ -103,3 +103,63 @@ void Socios :: listarSocios (IterPersonas &iter)
     cargarIterador(ABB, iter);
 
 }
+
+Boolean Socios :: Empty ()
+{
+    return (Boolean)(ABB == NULL);
+}
+
+float Socios :: CuotasTotalesEnArbol(Nodo * a, int mes)
+{
+    float totalNodo = 0.0;
+    float totalIzq = 0.0;
+    float totalDer = 0.0;
+    if(a != NULL)
+    {
+        totalIzq =CuotasTotalesEnArbol(a->hIzq, mes);
+        totalNodo = a->info->calcularCuotaTotal(mes);
+        totalDer = CuotasTotalesEnArbol(a->hDer, mes);
+    }
+    return totalNodo + totalIzq + totalDer;
+}
+
+float Socios :: montoTotalCuotasMes (int mes)
+{
+    return CuotasTotalesEnArbol(ABB, mes);
+}
+
+Socio * Socios :: socioMayorCuotaEnArbol (Nodo * a, int mes)
+{
+    Socio * socioMayor = a->info;
+    float cuotaMayor = a->info->calcularCuotaTotal(mes);
+
+    if(a->hIzq != NULL)
+    {
+        Socio * socioIzq = socioMayorCuotaEnArbol(a->hIzq, mes);
+        if(socioIzq->calcularCuotaTotal(mes) > cuotaMayor)
+        {
+            cuotaMayor = socioIzq->calcularCuotaTotal(mes);
+            socioMayor = socioIzq;
+        }
+
+    }
+
+    if(a->hDer != NULL)
+    {
+        Socio * socioDer = socioMayorCuotaEnArbol(a->hDer, mes);
+        if(socioDer->calcularCuotaTotal(mes) > cuotaMayor)
+        {
+            cuotaMayor = socioDer->calcularCuotaTotal(mes);
+            socioMayor = socioDer;
+        }
+
+    }
+
+    return socioMayor;
+}
+
+Socio * Socios :: socioCuotaMayor (int mes)
+{
+    return socioMayorCuotaEnArbol(ABB, mes);
+
+}

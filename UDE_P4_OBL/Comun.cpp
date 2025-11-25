@@ -47,5 +47,5 @@ void Comun :: mostrar()
 {
     Socio :: mostrar();
 
-    printf("Cuota Extra: %f", extra);
+    printf("Cuota Extra: %.2f", extra);
 }

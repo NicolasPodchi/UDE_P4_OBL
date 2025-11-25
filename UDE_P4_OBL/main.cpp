@@ -121,6 +121,8 @@ void procesarAltas(CapaLogica &capaLogica)
                     printf("Porcentaje Beca: ");
                     scanf("%d", &porcentaje);
 
+
+                    printf("Fecha que se otorga la beca:\n");
                     printf("Dia: ");
                     scanf("%d", &dia);
 
@@ -129,7 +131,6 @@ void procesarAltas(CapaLogica &capaLogica)
 
                     printf("Anio: ");
                     scanf("%d", &anio);
-
                     Fecha fechaOtorgada(dia, mes, anio);
 
                     nuevoSocio = new Becado(cedula, nombre, domicilio, cuotaBase, porcentaje, fechaOtorgada);
@@ -140,25 +141,25 @@ void procesarAltas(CapaLogica &capaLogica)
                 switch (error)
                 {
                 case ok:
-                    printf("Socio registrado con �xito");
+                    printf("\nSocio registrado con exito\n\n");
                     break;
                 case YaExisteSocio:
-                    printf("El socio que intenta registrar ya existe");
+                    printf("El socio que intenta registrar ya existe\n");
                     break;
                 case NoExisteEntrenador:
-                    printf("No existe un entrenador para la cedula ingresada");
+                    printf("No existe un entrenador para la cedula ingresada\n");
                     break;
                 case CuotaSocioNegativa:
-                    printf("El valor de la cuota base no puede ser negativo");
+                    printf("El valor de la cuota base no puede ser negativo\n");
                     break;
                 case ExtraSocioComunNegativo:
-                    printf("El valor de la cuota extra no puede ser negativo");
+                    printf("El valor de la cuota extra no puede ser negativo\n");
                     break;
                 case PorcentajBecadoNegativo:
-                    printf("El porcentaje de beca no puede ser negativo");
+                    printf("El porcentaje de beca no puede ser negativo\n");
                     break;
                 case FechaInvalida:
-                    printf("La fecha ingresada no es v�lida");
+                    printf("La fecha ingresada no es valida\n");
                     break;
                 }
 
@@ -204,6 +205,7 @@ void procesarListados(CapaLogica &capaLogica)
                 Persona * personaMostrar = iter.proximaPersona();
                 personaMostrar -> mostrar();
             }
+            printf("\n");
             system("pause");
             break;
         }
@@ -218,6 +220,8 @@ void procesarListados(CapaLogica &capaLogica)
                 Persona * personaMostrar = iter.proximaPersona();
                 personaMostrar -> mostrarBasico();
             }
+            printf("\n\n");
+
             system("pause");
 
             break;
@@ -274,11 +278,17 @@ void procesarConsultas(CapaLogica &capaLogica)
             system("pause");
             break;
         case 3:
+        {
             printf(":: CALCULAR TOTAL DE INGRESOS POR MES ::\n\n");/*Calcular monto total por mes*/
             //faus
-
+            int mes;
+            printf("Ingrese un mes (1 al 12): ");
+            scanf("%d", &mes);
+            float total = capaLogica.calcularCuotasTodos(mes);
+            printf("\nEl monto total del mes %d es de: %.2f\n\n", mes, total);
             system("pause");
             break;
+        }
         case 4:
             printf(":: CANTIDAD DE BECADOS POR FECHA ::\n\n");/*Contar cantidad becados con fechaOtorgada mayor a una fecha dada*/
             //pochi
@@ -292,11 +302,29 @@ void procesarConsultas(CapaLogica &capaLogica)
             system("pause");
             break;
         case 6:
+        {
             printf(":: SOCIO CON CUOTA MAS ALTA POR MES ::\n\n");/*Dado un mes, consultar en detalle el socio con la cuota mas alta*/
             //faus
-
+            Socio * mayor = NULL;
+            tipoError error = ok;
+            int mes;
+            printf("Ingrese un mes (1 al 12): ");
+            scanf("%d", &mes);
+            printf("\n");
+            capaLogica.socioCuotaMayor(mes, error, mayor);
+            switch(error)
+            {
+            case NoHaySocios:
+                printf("\nNo existen socios \n");
+                break;
+            case ok:
+                mayor->mostrar();
+            }
+            printf("\n\n");
             system("pause");
             break;
+
+        }
         case 0:
             /*VOLVER*/
             break;

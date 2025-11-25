@@ -20,6 +20,8 @@ private:
     void insertarEnArbol (Nodo * &, Socio *);
     Socio * obtenerEnArbol (Nodo *, long int);
     void cargarIterador (Nodo *, IterPersonas &);
+    float CuotasTotalesEnArbol(Nodo * , int);
+    Socio * socioMayorCuotaEnArbol (Nodo * , int);
 
 public:
     Socios();
@@ -27,7 +29,12 @@ public:
     Boolean member (long int);
     void Insert(Socio *);
     Socio * Find (long int);
+    Boolean Empty ();
     void listarSocios (IterPersonas &);
+    float montoTotalCuotasMes (int);
+
+    //Precondicion: Debe existir al menos un socio
+    Socio * socioCuotaMayor(int);
 };
 
 #endif // SOCIOS_H_INCLUDED

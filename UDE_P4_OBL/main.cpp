@@ -272,11 +272,35 @@ void procesarConsultas(CapaLogica &capaLogica)
             system("pause");
             break;
         case 2:
-            printf(":: CALCULAR CUOTA MENSUAL PARA SOCIO ::\n\n");/*consultar cuota mensual de un socio por cedula y mes*/
-            //feli
+        {
+            printf("\n:: CALCULAR CUOTA MENSUAL PARA SOCIO ::\n\n");
+
+            long int cedula;
+            int mes;
+
+            printf("INGRESE LA CEDULA DEL SOCIO: ");
+            scanf("%ld", &cedula);
+
+            printf("INGRESE EL MES (1-12): ");
+            scanf("%d", &mes);
+
+            Socio* socio = capaLogica.devolverSocio(cedula, error);
+
+            if (socio == NULL)
+            {
+                printf("NO SE ENCONTRO SOCIO CON ESA CEDULA.\n");
+            }
+            else
+            {
+                float cuota = socio->calcularCuotaTotal(mes);
+                printf("\nLA CUOTA DEL MES %d PARA EL SOCIO %ld ES: %.2f\n\n", mes, cedula, cuota);
+            }
 
             system("pause");
-            break;
+        }
+        break;
+        system("pause");
+        break;
         case 3:
         {
             printf(":: CALCULAR TOTAL DE INGRESOS POR MES ::\n\n");/*Calcular monto total por mes*/
@@ -295,12 +319,46 @@ void procesarConsultas(CapaLogica &capaLogica)
 
             system("pause");
             break;
-        case 5:
-            printf(":: CANTIDAD DE ENTRENADORES POR FECHA Y PROMEDIO DE SALARIOS ::\n\n");/*Dado un anio, contar entrenadores que ingresaron luego de esa fecha y calcular el salario promedio de todos ellos.*/
-            //feli
+      case 5:
+{
+    printf(":: CANTIDAD DE ENTRENADORES POR FECHA Y PROMEDIO DE SALARIOS ::\n\n");
 
-            system("pause");
-            break;
+    int anio;
+    printf("INGRESE EL ANIO: ");
+    scanf("%d", &anio);
+
+    IterPersonas iter;
+    capaLogica.listarEntrenadores(iter);
+
+    int contador = 0;
+    float sumaSalarios = 0;
+
+    while(iter.hayMasPersonas() == TRUE)
+    {
+        Persona * p = iter.proximaPersona();
+        Entrenador * ent = (Entrenador*) p;
+
+        if(ent->getAnio() > anio)
+        {
+            contador++;
+            sumaSalarios = sumaSalarios+ent->getSalario();
+        }
+    }
+
+    if(contador == 0)
+    {
+        printf("\nNO HAY ENTRENADORES QUE HAYAN INGRESADO LUEGO DEL ANIO %d.\n", anio);
+    }
+    else
+    {
+        float promedio = sumaSalarios / contador;
+        printf("\nCANTIDAD DE ENTRENADORES: %d\n", contador);
+        printf("PROMEDIO DE SALARIOS: %.2f\n", promedio);
+    }
+
+    system("pause");
+    break;
+}
         case 6:
         {
             printf(":: SOCIO CON CUOTA MAS ALTA POR MES ::\n\n");/*Dado un mes, consultar en detalle el socio con la cuota mas alta*/

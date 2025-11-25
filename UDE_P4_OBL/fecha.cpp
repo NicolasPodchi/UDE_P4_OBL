@@ -1,4 +1,6 @@
 #include "fecha.h"
+
+
 bool Fecha :: esBisiesto()
 {
     return ((anio % 4 == 0 && anio % 100 != 0 ) || anio % 400 == 0);
@@ -220,3 +222,9 @@ bool Fecha :: esValida ()
     }
     return valido;
 }
+
+void Fecha :: imprimir()
+{
+    printf("%d/%d/%d", dia, mes, anio);
+}
+

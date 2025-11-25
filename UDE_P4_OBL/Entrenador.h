@@ -15,5 +15,6 @@ public:
     float getSalario();
     int getAnio();
 
+    void mostrarBasico();
     void mostrar();
 };

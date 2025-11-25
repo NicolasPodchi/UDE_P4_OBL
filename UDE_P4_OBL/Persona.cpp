@@ -29,4 +29,10 @@ long int Persona :: getCedula()
 
 void Persona :: mostrar()
 {
+    printf("Cedula: %ld", cedula);
+    printf(" | ");
+
+    printf("Nombre: ");
+    nombre.print();
+    printf(" | ");
 }

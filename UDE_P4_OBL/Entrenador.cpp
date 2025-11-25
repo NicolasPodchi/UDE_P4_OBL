@@ -29,5 +29,16 @@ int Entrenador :: getAnio()
 
 void Entrenador :: mostrar()
 {
+    Persona :: mostrar();
+
+    printf("Salario: %f", salario);
+    printf(" | ");
+
+    printf("Año ingreso: %d", anioComienzo);
+
+    printf("\n\n");
 }
 
+void Entrenador :: mostrarBasico()
+{
+}

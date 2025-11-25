@@ -64,11 +64,14 @@ void CapaLogica :: registrarSocio(Socio * nuevoSocio, long int cedulaEntrenador,
 
     if(error == ok)
     {
+        Entrenador * entrenadorAsignado = diccEntrenadores.Find(cedulaEntrenador);
+        nuevoSocio -> setEntrenador(entrenadorAsignado);
+
         diccSocios.Insert(nuevoSocio);
     }
 }
 
-IterPersonas CapaLogica :: listarEntrenadores(IterPersonas &iter)
+void CapaLogica :: listarEntrenadores(IterPersonas & iter)
 {
     diccEntrenadores.listarEntrenadores(iter);
 }

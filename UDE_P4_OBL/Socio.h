@@ -12,14 +12,17 @@ private:
     Entrenador * entrenador;
 
 public:
-    Socio (long int, String, String, float, Entrenador);
+    virtual ~Socio();
+    Socio (long int, String, String, float, Entrenador *);
     Socio (long int, String, String, float);
     float getCuota();
     String getDomicilio();
     Entrenador * getEntrenador();
+    void setEntrenador(Entrenador *);
     virtual String tipoSocio() = 0;
 
     virtual float calcularCuotaTotal(int);
+    void mostrarBasico();
     void mostrar();
 };
 

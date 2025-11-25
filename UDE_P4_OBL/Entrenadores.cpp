@@ -49,11 +49,11 @@ void Entrenadores :: insFront (Nodo * &l, Entrenador e)
     l = nuevo;
 }
 
-Entrenador Entrenadores :: obtenerEnLista(Nodo * l, long int clave)
+Entrenador * Entrenadores :: obtenerEnLista(Nodo * l, long int clave)
 {
     while(l->e.getCedula()!=clave)
         l=l->sig;
-    return l->e;
+    return &l->e;
 }
 
 void Entrenadores :: borrarEnLista (Nodo * &l, int clave)
@@ -101,7 +101,7 @@ void Entrenadores::Insert (Entrenador e)
 }
 
 //Precondición: el elemento es miembro del diccionario.
-Entrenador Entrenadores :: Find (long int ci)
+Entrenador * Entrenadores :: Find (long int ci)
 {
     int cubeta = dispersion(ci);
     return obtenerEnLista(Hash[cubeta], ci);
@@ -118,13 +118,14 @@ void Entrenadores :: cargarIteradorLista (Nodo * l, IterPersonas &iter)
 {
     while(l!=NULL)
     {
-        iter.insertar(new Entrenador(l->e));
+        iter.insertar(&l->e);
+        l = l->sig;
     }
 }
 
-IterPersonas Entrenadores :: listarEntrenadores(IterPersonas &iter)
+void Entrenadores :: listarEntrenadores(IterPersonas &iter)
 {
-    for(int i = 0; i<B ; i++)
+    for(int i = 0; i < B; i++)
     {
         cargarIteradorLista(Hash[i], iter);
     }

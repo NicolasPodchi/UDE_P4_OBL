@@ -15,6 +15,7 @@ public :
     String getNombre();
     long int getCedula();
 
+    virtual void mostrarBasico() = 0;
     virtual void mostrar();
 };
 

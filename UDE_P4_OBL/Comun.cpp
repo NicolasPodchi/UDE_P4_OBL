@@ -1,13 +1,13 @@
 #include "Comun.h"
 
-Comun :: Comun (long int ci, String nombre, String domicilio, float cuota, Entrenador ent, float extra): Socio(ci,nombre,domicilio,cuota,ent)
+Comun :: Comun (long int ci, String nombre, String domicilio, float cuota, Entrenador * ent, float cuotaExtra): Socio(ci,nombre,domicilio,cuota,ent)
 {
-    extra=extra;
+    extra=cuotaExtra;
 }
 
-Comun :: Comun (long int ci, String nombre, String domicilio, float cuota, float extra): Socio(ci,nombre,domicilio,cuota)
+Comun :: Comun (long int ci, String nombre, String domicilio, float cuota, float cuotaExtra): Socio(ci,nombre,domicilio,cuota)
 {
-    extra=extra;
+    extra=cuotaExtra;
 }
 
 float Comun ::  getExtra ()
@@ -28,4 +28,7 @@ float Comun :: calcularCuotaTotal(int)
 
 void Comun :: mostrar()
 {
+    Socio :: mostrar();
+
+    printf("Cuota Extra: %f", extra);
 }

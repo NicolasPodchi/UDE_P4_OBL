@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void procesarAltas(CapaLogica capaLogica)
+void procesarAltas(CapaLogica &capaLogica)
 {
     tipoError error = ok;
 
@@ -28,6 +28,7 @@ void procesarAltas(CapaLogica capaLogica)
 
     Socio * nuevoSocio;
     Entrenador nuevoEntrenador;
+
     do
     {
         system("cls");
@@ -41,6 +42,7 @@ void procesarAltas(CapaLogica capaLogica)
             printf(":: CREAR ENTRENADOR ::");
             do
             {
+                error = ok;
 
                 printf("\n\nIngrese los datos del nuevo entrenador:\n\n");
                 printf("Cedula: ");
@@ -58,6 +60,7 @@ void procesarAltas(CapaLogica capaLogica)
                 nuevoEntrenador = Entrenador(cedula, nombre, salario, anio);
 
                 capaLogica.registrarEntrenador(nuevoEntrenador,error);
+
                 switch(error)
                 {
                 case ok:
@@ -84,6 +87,8 @@ void procesarAltas(CapaLogica capaLogica)
 
             do
             {
+                error = ok;
+
                 printf("\n\nIngrese los datos del nuevo socio:\n\n");
 
                 printf("Cedula: ");
@@ -176,11 +181,9 @@ void procesarAltas(CapaLogica capaLogica)
     while (opcionAltas != 0);
 }
 
-void procesarListados(CapaLogica capaLogica)
+void procesarListados(CapaLogica &capaLogica)
 {
     int opcionListados;
-
-    IterPersonas iter;
 
     do
     {
@@ -191,25 +194,29 @@ void procesarListados(CapaLogica capaLogica)
         switch(opcionListados)
         {
         case 1:
-
+        {
+            IterPersonas iter;
             printf(":: LISTADO DE ENTRENADORES ::\n\n");
             capaLogica.listarEntrenadores(iter);
 
             while(iter.hayMasPersonas() == TRUE)
             {
-                Persona * personaMostrar;
+                Persona * personaMostrar = iter.proximaPersona();
+                personaMostrar -> mostrar();
             }
             system("pause");
             break;
+        }
         case 2:
         {
+            IterPersonas iter;
             printf(":: LISTADO DE SOCIOS ::\n\n");
             capaLogica.listarSocios(iter);
 
             while(iter.hayMasPersonas() == TRUE)
             {
                 Persona * personaMostrar = iter.proximaPersona();
-                personaMostrar -> mostrar();
+                personaMostrar -> mostrarBasico();
             }
             system("pause");
 
@@ -228,7 +235,7 @@ void procesarListados(CapaLogica capaLogica)
     while (opcionListados != 0);
 }
 
-void procesarConsultas(CapaLogica capaLogica)
+void procesarConsultas(CapaLogica &capaLogica)
 {
     int opcionConsultas;
 

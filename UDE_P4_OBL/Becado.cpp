@@ -1,6 +1,6 @@
 #include "Becado.h"
 
-Becado:: Becado (long int ci, String nombre, String domicilio, float cuota, Entrenador ent, int porcentaje, Fecha fechaOtorgada): Socio(ci,nombre,domicilio,cuota,ent)
+Becado:: Becado (long int ci, String nombre, String domicilio, float cuota, Entrenador * ent, int porcentaje, Fecha fechaOtorgada): Socio(ci,nombre,domicilio,cuota,ent)
 {
     porcentaje=porcentaje;
     fechaOtorgada=fechaOtorgada;
@@ -35,4 +35,11 @@ float Becado :: calcularCuotaTotal(int)
 
 void Becado :: mostrar()
 {
+    Socio :: mostrar();
+
+    printf("Porcentaje Beca: %d", porcentaje);
+    printf(" | ");
+
+    printf("Fecha Otorgada: ");
+    fechaOtorgada.imprimir();
 }

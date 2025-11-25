@@ -11,7 +11,7 @@ private:
 
 public:
     Becado ();
-    Becado (long int, String, String, float, Entrenador, int, Fecha);
+    Becado (long int, String, String, float, Entrenador *, int, Fecha);
     Becado (long int, String, String, float, int, Fecha);
     int getPorcentaje();
     Fecha getFechaOtorgada();

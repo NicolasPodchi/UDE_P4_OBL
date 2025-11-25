@@ -1,6 +1,6 @@
 #ifndef BOOLEAN_H_INCLUDED
 #define BOOLEAN_H_INCLUDED
-#include <cstdio>
+#include <stdio.h>
 
 typedef enum {FALSE, TRUE} Boolean;
 

@@ -24,7 +24,7 @@ private:
 
     void insFront (Nodo * &, Entrenador);
 
-    Entrenador obtenerEnLista(Nodo *, long int);
+    Entrenador * obtenerEnLista(Nodo *, long int);
 
     void borrarEnLista (Nodo * &l, int clave);
 
@@ -44,12 +44,12 @@ public:
     void Insert(Entrenador);
 
     //Precondición: el elemento es miembro del diccionario.
-    Entrenador Find(long int);
+    Entrenador * Find(long int);
 
     //Precondición: el elemento es miembro del diccionario.
     void Delete(long int);
 
-    IterPersonas listarEntrenadores(IterPersonas &);
+    void listarEntrenadores(IterPersonas &);
 };
 
 #endif // ENTRENADORES_H_INCLUDED

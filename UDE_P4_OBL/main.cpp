@@ -249,37 +249,37 @@ void procesarConsultas(CapaLogica &capaLogica)
         {
         case 1:
             printf(":: CONSULTAR SOCIO ::\n\n");/*consultar un socio en detalle*/
-
+            //pochi
 
             system("pause");
             break;
         case 2:
             printf(":: CALCULAR CUOTA MENSUAL PARA SOCIO ::\n\n");/*consultar cuota mensual de un socio por cedula y mes*/
-
+            //feli
 
             system("pause");
             break;
         case 3:
             printf(":: CALCULAR TOTAL DE INGRESOS POR MES ::\n\n");/*Calcular monto total por mes*/
-
+            //faus
 
             system("pause");
             break;
         case 4:
             printf(":: CANTIDAD DE BECADOS POR FECHA ::\n\n");/*Contar cantidad becados con fechaOtorgada mayor a una fecha dada*/
-
+            //pochi
 
             system("pause");
             break;
         case 5:
             printf(":: CANTIDAD DE ENTRENADORES POR FECHA Y PROMEDIO DE SALARIOS ::\n\n");/*Dado un anio, contar entrenadores que ingresaron luego de esa fecha y calcular el salario promedio de todos ellos.*/
-
+            //feli
 
             system("pause");
             break;
         case 6:
             printf(":: SOCIO CON CUOTA MAS ALTA POR MES ::\n\n");/*Dado un mes, consultar en detalle el socio con la cuota mas alta*/
-
+            //faus
 
             system("pause");
             break;

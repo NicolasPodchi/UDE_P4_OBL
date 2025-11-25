@@ -21,9 +21,26 @@ String Comun :: tipoSocio()
     return tipo;
 }
 
-float Comun :: calcularCuotaTotal(int)
+float Comun :: calcularCuotaTotal(int mes)
 {
-    return 0;
+    float cuotaTotal=getCuota();
+
+    if (this->extra<=cuotaTotal*0.25)
+        cuotaTotal=cuotaTotal+extra/2;
+    else
+    {
+        if(extra<= cuotaTotal*0.75)
+            cuotaTotal=cuotaTotal+extra;
+        else
+            cuotaTotal=cuotaTotal+extra*1.25;
+    }
+
+    if (mes==1||mes==2)
+    {
+        cuotaTotal=cuotaTotal*0.20;
+    }
+
+    return cuotaTotal;
 }
 
 void Comun :: mostrar()

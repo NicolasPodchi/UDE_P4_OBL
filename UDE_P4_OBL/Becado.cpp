@@ -28,9 +28,18 @@ String Becado :: tipoSocio()
     return tipo;
 }
 
-float Becado :: calcularCuotaTotal(int)
+float Becado :: calcularCuotaTotal(int mes)
 {
-    return 0;
+    float cuotaTotal=getCuota();
+    if ( Fecha(28, 2, 2025) < fechaOtorgada )
+        cuotaTotal=cuotaTotal*(1-porcentaje/100.0);
+    else
+        cuotaTotal = cuotaTotal*(1 - (porcentaje/2)/100.0);
+
+    if  (mes==1||mes==2)
+        cuotaTotal=cuotaTotal*0.30;
+
+    return cuotaTotal;
 }
 
 void Becado :: mostrar()

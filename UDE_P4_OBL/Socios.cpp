@@ -96,7 +96,6 @@ void Socios :: Insert(Socio * s)
 Socio * Socios ::  Find (long int ci)
 {
     return obtenerEnArbol(ABB, ci);
-
 }
 
 void Socios :: listarSocios (IterPersonas &iter)

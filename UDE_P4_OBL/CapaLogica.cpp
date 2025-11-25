@@ -81,8 +81,10 @@ void CapaLogica :: listarSocios(IterPersonas & iter)
     diccSocios.listarSocios(iter);
 }
 
-Socio * CapaLogica :: devolverSocio(long int, tipoError &)
+Socio * CapaLogica :: devolverSocio(long int cedula, tipoError &error)
 {
+    Socio * socio = diccSocios.Find(cedula);
+    return socio;
 }
 
 float CapaLogica :: calcularCuotaSocio(int, tipoError &) {}

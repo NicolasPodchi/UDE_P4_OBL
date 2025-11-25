@@ -140,7 +140,7 @@ void procesarAltas(CapaLogica &capaLogica)
                 switch (error)
                 {
                 case ok:
-                    printf("Socio registrado con éxito");
+                    printf("Socio registrado con ï¿½xito");
                     break;
                 case YaExisteSocio:
                     printf("El socio que intenta registrar ya existe");
@@ -158,7 +158,7 @@ void procesarAltas(CapaLogica &capaLogica)
                     printf("El porcentaje de beca no puede ser negativo");
                     break;
                 case FechaInvalida:
-                    printf("La fecha ingresada no es válida");
+                    printf("La fecha ingresada no es vï¿½lida");
                     break;
                 }
 
@@ -237,7 +237,12 @@ void procesarListados(CapaLogica &capaLogica)
 
 void procesarConsultas(CapaLogica &capaLogica)
 {
+    tipoError error = ok;
+
     int opcionConsultas;
+
+    long int cedula;
+    Socio * socio;
 
     do
     {
@@ -249,7 +254,16 @@ void procesarConsultas(CapaLogica &capaLogica)
         {
         case 1:
             printf(":: CONSULTAR SOCIO ::\n\n");/*consultar un socio en detalle*/
-            //pochi
+
+            error = ok;
+
+            printf("\n\nIngrese los datos del nuevo socio:\n\n");
+
+            printf("Cedula: ");
+            scanf("%ld", &cedula);
+
+            socio = capaLogica.devolverSocio(cedula, error);
+            socio -> mostrar();
 
             system("pause");
             break;

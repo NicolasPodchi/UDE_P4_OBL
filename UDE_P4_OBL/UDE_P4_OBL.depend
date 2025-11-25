@@ -52,13 +52,13 @@
 1763834581 c:\users\felip\onedrive\escritorio\p4 oblbigatorio\ude_p4_obl\ude_p4_obl\comun.h
 	"Socio.h"
 
-1764038289 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\becado.cpp
+1764038372 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\becado.cpp
 	"Becado.h"
 
 1763912733 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\boolean.cpp
 	"Boolean.h"
 
-1764037609 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\capalogica.cpp
+1764042521 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\capalogica.cpp
 	"CapaLogica.h"
 
 1764038364 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\comun.cpp
@@ -95,7 +95,7 @@
 1764026520 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\iterpersonas.cpp
 	"IterPersonas.h"
 
-1764037789 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\main.cpp
+1764042374 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\main.cpp
 	<iostream>
 	"Menu.h"
 	"CapaLogica.h"
@@ -103,7 +103,7 @@
 1764037755 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socio.cpp
 	"Socio.h"
 
-1763929521 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socios.cpp
+1764042475 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\socios.cpp
 	"Socios.h"
 
 1763928869 source:c:\ude\programacion 4\obligatorio\ude_p4_obl\ude_p4_obl\string.cpp

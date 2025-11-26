@@ -37,7 +37,7 @@ float Comun :: calcularCuotaTotal(int mes)
 
     if (mes==1||mes==2)
     {
-        cuotaTotal=cuotaTotal*0.20;
+        cuotaTotal=cuotaTotal*0.80;
     }
 
     return cuotaTotal;

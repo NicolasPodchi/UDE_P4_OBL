@@ -131,3 +131,25 @@ void Entrenadores :: listarEntrenadores(IterPersonas &iter)
     }
 }
 
+void Entrenadores::ChequearAnioYPromedio (Nodo * l, int anio, float &suma, int &cant)
+{
+    while (l!=NULL)
+    {
+        if (l->e.getAnio()>=anio)
+        {
+            cant++;
+            suma=suma+ l->e.getSalario();
+        }
+        l=l->sig;
+    }
+
+}
+
+void Entrenadores::recorrerEntrenadorAnioYpromedio(int anio, int &cant, float &prom)
+{
+    for (int i = 0; i < B; i++)
+    {
+        ChequearAnioYPromedio(Hash[i], anio, prom, cant);
+    }
+    prom = prom/cant;
+}

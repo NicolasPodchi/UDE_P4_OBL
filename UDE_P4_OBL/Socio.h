@@ -1,7 +1,6 @@
 #ifndef SOCIO_H_INCLUDED
 #define SOCIO_H_INCLUDED
 
-#pragma once
 #include "Entrenador.h"
 
 class Socio: public Persona

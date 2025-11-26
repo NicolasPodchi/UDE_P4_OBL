@@ -117,7 +117,7 @@ float Socios :: CuotasTotalesEnArbol(Nodo * a, int mes)
     if(a != NULL)
     {
         totalIzq =CuotasTotalesEnArbol(a->hIzq, mes);
-        totalNodo = a->info->calcularCuotaTotal(mes);
+        totalNodo = (a->info)->calcularCuotaTotal(mes);
         totalDer = CuotasTotalesEnArbol(a->hDer, mes);
     }
     return totalNodo + totalIzq + totalDer;

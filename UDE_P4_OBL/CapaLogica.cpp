@@ -51,6 +51,7 @@ void CapaLogica :: registrarSocio(Socio * nuevoSocio, long int cedulaEntrenador,
         }
         else
         {
+            int coso = ((Becado *)nuevoSocio) -> getPorcentaje() ;
             if(((Becado *)nuevoSocio) -> getPorcentaje() < 0)
             {
                 error = PorcentajBecadoNegativo;
@@ -81,12 +82,18 @@ void CapaLogica :: listarSocios(IterPersonas & iter)
     diccSocios.listarSocios(iter);
 }
 
-Socio * CapaLogica :: devolverSocio(long int cedula, tipoError &error)
+void CapaLogica :: devolverSocio(long int cedula, tipoError &error, Socio * &s)
 {
-    Socio * socio = diccSocios.Find(cedula);
-    return socio;
+    if((Boolean)diccSocios.member(cedula) == FALSE)
+    {
+        error = NoExisteSocio;
+    }
+    else
+    {
+        Socio * socio = diccSocios.Find(cedula);
+        error = ok;
+    }
 }
-
 float CapaLogica :: calcularCuotaSocio(int, tipoError &) {}
 
 
@@ -108,4 +115,9 @@ void CapaLogica :: socioCuotaMayor(int mes, tipoError &error, Socio * &s)
         s = diccSocios.socioCuotaMayor(mes);
         error = ok;
     }
+}
+
+void CapaLogica :: cuantosEntrenadoresYPromedioSalario(int Anio, int &cant, float &promedio)
+{
+    diccEntrenadores.recorrerEntrenadorAnioYpromedio(Anio,cant,promedio);
 }

@@ -1,15 +1,15 @@
 #include "Becado.h"
 
-Becado:: Becado (long int ci, String nombre, String domicilio, float cuota, Entrenador * ent, int porcentaje, Fecha fechaOtorgada): Socio(ci,nombre,domicilio,cuota,ent)
+Becado:: Becado (long int ci, String nombre, String domicilio, float cuota, Entrenador * ent, int porc, Fecha fechaOtorg): Socio(ci,nombre,domicilio,cuota,ent)
 {
-    porcentaje=porcentaje;
-    fechaOtorgada=fechaOtorgada;
+    porcentaje=porc;
+    fechaOtorgada=fechaOtorg;
 }
 
-Becado:: Becado (long int ci, String nombre, String domicilio, float cuota, int porcentaje, Fecha fechaOtorgada): Socio(ci,nombre,domicilio,cuota)
+Becado:: Becado (long int ci, String nombre, String domicilio, float cuota, int porc, Fecha fechaOtorg): Socio(ci,nombre,domicilio,cuota)
 {
-    porcentaje=porcentaje;
-    fechaOtorgada=fechaOtorgada;
+    porcentaje=porc;
+    fechaOtorgada=fechaOtorg;
 }
 
 int Becado ::  getPorcentaje ()

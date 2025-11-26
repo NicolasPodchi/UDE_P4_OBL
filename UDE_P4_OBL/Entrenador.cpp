@@ -38,6 +38,6 @@ void Entrenador :: mostrar()
 
 }
 
-void Entrenador :: mostrarBasico()
+void Entrenador :: mostrarBasico() //borrar dejarlo en socio nomas
 {
 }

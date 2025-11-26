@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENTRENADOR_H_INCLUDED
+#define ENTRENADOR_H_INCLUDED
 #include "Persona.h"
 
 class Entrenador: public Persona
@@ -17,4 +18,7 @@ public:
 
     void mostrarBasico();
     void mostrar();
+
+    //DESTRUCTORES EN TODOS
 };
+ #endif

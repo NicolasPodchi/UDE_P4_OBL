@@ -53,3 +53,8 @@ void Becado :: mostrar()
     fechaOtorgada.imprimir();
     printf("\n");
 }
+
+Becado :: ~Becado()
+{
+
+}

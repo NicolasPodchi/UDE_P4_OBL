@@ -254,3 +254,8 @@ void Fecha :: imprimir()
     printf("%d/%d/%d", dia, mes, anio);
 }
 
+Fecha :: ~Fecha()
+{
+
+}
+

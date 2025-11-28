@@ -16,5 +16,6 @@ public:
 
     float calcularCuotaTotal(int);
     void mostrar();
+    ~Comun();
 };
 #endif // COMUN_H_INCLUDED

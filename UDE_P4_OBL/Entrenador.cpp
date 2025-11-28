@@ -44,3 +44,8 @@ void Entrenador :: mostrar()
     printf("\n");
 
 }
+
+Entrenador :: ~Entrenador()
+{
+
+}

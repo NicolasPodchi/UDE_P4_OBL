@@ -173,8 +173,8 @@ int Socios :: cuantosBecadosDesdeFecha(Nodo * a, Fecha f)
         Socio * socioActual = a -> info;
         if(socioActual -> tipoSocio() == "becado")
         {
-            Fecha coso = ((Becado *)socioActual) -> getFechaOtorgada();
-            if(f < coso)
+            Fecha fechaBeca = ((Becado *)socioActual) -> getFechaOtorgada();
+            if(f < fechaBeca)
             {
                 cantidadBecados++;
             }

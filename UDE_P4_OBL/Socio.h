@@ -20,10 +20,10 @@ public:
     void setEntrenador(Entrenador *);
     String tipoPersona();
     virtual String tipoSocio() = 0;
-
     virtual float calcularCuotaTotal(int);
     virtual void mostrarBasico();
     void mostrar();
+
 };
 
 #endif // SOCIO_H_INCLUDED

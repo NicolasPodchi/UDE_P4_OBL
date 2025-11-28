@@ -71,7 +71,7 @@ void procesarAltas(CapaLogica &capaLogica)
                     printf("La cedula ingresada ya esta registrada para un socio");
                     break;
 
-                case YaExisteEntrenador:
+                case ExisteEntrenadorComoSocio:
                     printf("La cedula ingresada ya esta registrada para un entrenador");
                     break;
                 }
@@ -344,7 +344,7 @@ void procesarConsultas(CapaLogica &capaLogica)
             Fecha fecha(dia, mes, anio);
 
             int cantidadBecados = capaLogica.contarBecadosPorFecha(fecha);
-            printf("\nA %d socios becados se les otorgo la beca luego de la fecha ingresada\n\n", cantidadBecados);
+            printf("\nA %d socio/s se le/s otorgo la beca luego de la fecha ingresada\n\n", cantidadBecados);
 
             system("pause");
             break;
@@ -380,7 +380,7 @@ void procesarConsultas(CapaLogica &capaLogica)
             switch(error)
             {
             case NoHaySocios:
-                printf("\nNo existen socios \n");
+                printf("\nNo hay socios registrados\n");
                 break;
             case ok:
                 mayor->mostrar();

@@ -26,6 +26,7 @@ public:
     int contarBecadosPorFecha(Fecha);
     void socioCuotaMayor(int, tipoError &, Socio * &);
     void cuantosEntrenadoresYPromedioSalario(int, int &, float &);
+    ~CapaLogica();
 };
 
 

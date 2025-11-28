@@ -16,9 +16,8 @@ public:
     float getSalario();
     int getAnio();
     String tipoPersona();
-
     void mostrar();
+    ~Entrenador();
 
-    //DESTRUCTORES EN TODOS
 };
  #endif

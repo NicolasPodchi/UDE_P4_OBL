@@ -50,3 +50,8 @@ void Comun :: mostrar()
     printf("Cuota Extra: %.2f", extra);
     printf("\n");
 }
+
+Comun :: ~Comun()
+{
+
+}

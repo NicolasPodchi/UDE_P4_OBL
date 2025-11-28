@@ -25,6 +25,7 @@ public:
     int operator- (Fecha);
     bool esValida ();
     void imprimir();
+    ~Fecha();
 
 };
 

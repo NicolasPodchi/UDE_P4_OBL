@@ -53,6 +53,7 @@ public:
     void listarEntrenadores(IterPersonas &);
 
     void recorrerEntrenadorAnioYpromedio(int, int &, float &);
+
 };
 
 #endif // ENTRENADORES_H_INCLUDED

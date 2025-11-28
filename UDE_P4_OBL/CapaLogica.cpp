@@ -15,7 +15,7 @@ void CapaLogica :: registrarEntrenador(Entrenador e, tipoError &error)
     {
         if(diccSocios.member(e.getCedula()))
         {
-            error = YaExisteSocio;
+            error = ExisteEntrenadorComoSocio;
         }
         else
         {
@@ -55,7 +55,6 @@ void CapaLogica :: registrarSocio(Socio * nuevoSocio, long int cedulaEntrenador,
         }
         else
         {
-            int coso = ((Becado *)nuevoSocio) -> getPorcentaje() ;
             if(((Becado *)nuevoSocio) -> getPorcentaje() < 0)
             {
                 error = PorcentajBecadoNegativo;
@@ -128,4 +127,9 @@ void CapaLogica :: socioCuotaMayor(int mes, tipoError &error, Socio * &s)
 void CapaLogica :: cuantosEntrenadoresYPromedioSalario(int Anio, int &cant, float &promedio)
 {
     diccEntrenadores.recorrerEntrenadorAnioYpromedio(Anio,cant,promedio);
+}
+
+CapaLogica :: ~CapaLogica()
+{
+
 }

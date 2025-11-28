@@ -19,6 +19,7 @@ public:
 
     float calcularCuotaTotal(int);
     void mostrar();
+    ~Becado();
 };
 
 #endif // BECADO_H_INCLUDED

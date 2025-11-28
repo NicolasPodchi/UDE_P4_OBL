@@ -61,11 +61,15 @@ void Socio :: mostrar()
 {
     Persona :: mostrar();
 
-    printf("+ Domicilio: ");
+    printf("Domicilio: ");
     domicilio.print();
-    printf("\n");
+    printf(" | ");
 
-    printf("+ Cuota Base: %.2f", cuotaBase);
+    printf("Tipo de socio: ");
+    tipoSocio().print();
+    printf(" | ");
+
+    printf("Cuota Base: %.2f", cuotaBase);
     printf("\n");
 
     printf("+ Entrenador: ");

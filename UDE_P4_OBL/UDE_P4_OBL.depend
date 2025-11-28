@@ -166,10 +166,10 @@
 1764082825 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\boolean.h
 	<stdio.h>
 
-1764334396 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\entrenador.cpp
+1764343465 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\entrenador.cpp
 	"Entrenador.h"
 
-1764334396 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\entrenador.h
+1764343465 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\entrenador.h
 	"Persona.h"
 
 1764334396 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\persona.h
@@ -192,7 +192,7 @@
 	"Persona.h"
 	"Boolean.h"
 
-1763922558 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\menu.cpp
+1764368863 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\menu.cpp
 	<iostream>
 	"menu.h"
 
@@ -201,7 +201,7 @@
 1764082825 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\persona.cpp
 	"Persona.h"
 
-1764338615 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\socios.cpp
+1764340702 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\socios.cpp
 	"Socios.h"
 
 1764334396 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\socios.h
@@ -215,14 +215,14 @@
 1764334396 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\becado.cpp
 	"Becado.h"
 
-1764082825 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\becado.h
+1764369650 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\becado.h
 	"Fecha.h"
 	"Socio.h"
 
-1764334396 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\capalogica.cpp
+1764366033 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\capalogica.cpp
 	"CapaLogica.h"
 
-1764334396 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\capalogica.h
+1764340702 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\capalogica.h
 	"tipoError.h"
 	"Fecha.h"
 	"Socios.h"
@@ -230,7 +230,7 @@
 	"Becado.h"
 	"Entrenadores.h"
 
-1764334396 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\tipoerror.h
+1764363978 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\tipoerror.h
 	"String.h"
 
 1764082825 c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\comun.h
@@ -243,10 +243,10 @@
 1764334396 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\comun.cpp
 	"Comun.h"
 
-1764334396 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\entrenadores.cpp
+1764340702 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\entrenadores.cpp
 	"Entrenadores.h"
 
-1764334396 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\socio.cpp
+1764367584 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\socio.cpp
 	"Socio.h"
 
 1763930242 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\string.cpp
@@ -254,7 +254,7 @@
 	<string.h>
 	<iostream>
 
-1764339899 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\main.cpp
+1764364006 source:c:\users\fauss\onedrive\escritorio\code ude\pr 4\obl pr 4\ude_p4_obl\ude_p4_obl\main.cpp
 	<iostream>
 	"Menu.h"
 	"CapaLogica.h"

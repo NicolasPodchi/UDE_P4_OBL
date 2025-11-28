@@ -36,3 +36,8 @@ void Persona :: mostrar()
     nombre.print();
     printf(" | ");
 }
+
+Persona :: ~Persona()
+{
+
+}

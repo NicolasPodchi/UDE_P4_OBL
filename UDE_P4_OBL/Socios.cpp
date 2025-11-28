@@ -163,3 +163,38 @@ Socio * Socios :: socioCuotaMayor (int mes)
     return socioMayorCuotaEnArbol(ABB, mes);
 
 }
+
+int Socios :: cuantosBecadosDesdeFecha(Nodo * a, Fecha f)
+{
+    int cantidadBecados = 0;
+
+    if(a != NULL)
+    {
+        Socio * socioActual = a -> info;
+        if(socioActual -> tipoSocio() == "becado")
+        {
+            Fecha coso = ((Becado *)socioActual) -> getFechaOtorgada();
+            if(f < coso)
+            {
+                cantidadBecados++;
+            }
+        }
+
+        if(a->hIzq != NULL)
+        {
+            cantidadBecados += cuantosBecadosDesdeFecha(a -> hIzq, f);
+        }
+
+        if(a->hDer != NULL)
+        {
+            cantidadBecados += cuantosBecadosDesdeFecha(a -> hDer, f);
+        }
+
+        return cantidadBecados;
+    }
+}
+
+int Socios :: contarBecadosPorFecha(Fecha f)
+{
+    return cuantosBecadosDesdeFecha(ABB, f);
+}

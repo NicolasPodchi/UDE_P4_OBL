@@ -34,7 +34,6 @@ private:
 
     void ChequearAnioYPromedio (Nodo*, int, float&, int&);
 
-
 public:
     Entrenadores();
 
@@ -53,7 +52,7 @@ public:
 
     void listarEntrenadores(IterPersonas &);
 
-    void recorrerEntrenadorAnioYpromedio(int , int &, float &);
+    void recorrerEntrenadorAnioYpromedio(int, int &, float &);
 };
 
 #endif // ENTRENADORES_H_INCLUDED

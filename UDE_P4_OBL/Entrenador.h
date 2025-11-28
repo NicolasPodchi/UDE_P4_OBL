@@ -15,6 +15,7 @@ public:
     Entrenador (const Entrenador &);
     float getSalario();
     int getAnio();
+    String tipoPersona();
 
     void mostrarBasico();
     void mostrar();

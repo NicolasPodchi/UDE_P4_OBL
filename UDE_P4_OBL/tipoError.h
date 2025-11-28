@@ -14,6 +14,7 @@ typedef enum tipoError
     ExtraSocioComunNegativo,
     PorcentajBecadoNegativo,
     FechaInvalida,
-    NoExisteEntrenador
+    NoExisteEntrenador,
+    ExisteSocioComoEntrenador
 };
 #endif // TIPOERROR_H_INCLUDED

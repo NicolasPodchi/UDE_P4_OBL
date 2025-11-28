@@ -18,10 +18,11 @@ public:
     String getDomicilio();
     Entrenador * getEntrenador();
     void setEntrenador(Entrenador *);
+    String tipoPersona();
     virtual String tipoSocio() = 0;
 
     virtual float calcularCuotaTotal(int);
-    void mostrarBasico();
+    virtual void mostrarBasico();
     void mostrar();
 };
 

@@ -38,6 +38,12 @@ void Socio :: setEntrenador(Entrenador * entrenadorAsignar)
     this -> entrenador = entrenadorAsignar;
 }
 
+String Socio :: tipoPersona()
+{
+    String tipo("socio");
+    return tipo;
+}
+
 float Socio ::  calcularCuotaTotal(int mes)
 {
 }
@@ -55,14 +61,15 @@ void Socio :: mostrar()
 {
     Persona :: mostrar();
 
-    printf("Domicilio: ");
+    printf("+ Domicilio: ");
     domicilio.print();
-    printf(" | ");
+    printf("\n");
 
-    printf("Cuota Base: %.2f", cuotaBase);
-    printf(" | ");
+    printf("+ Cuota Base: %.2f", cuotaBase);
+    printf("\n");
 
-    printf("Entrenador: ");
+    printf("+ Entrenador: ");
     entrenador -> mostrar();
-    printf(" | ");
+    printf("\n");
 }
+

@@ -84,6 +84,7 @@ void procesarAltas(CapaLogica &capaLogica)
         case 2:
         {
             printf(":: CREAR SOCIO ::");
+
             error = ok;
 
             printf("\n\nIngrese los datos del nuevo socio:\n\n");
@@ -143,6 +144,9 @@ void procesarAltas(CapaLogica &capaLogica)
             case YaExisteSocio:
                 printf("El socio que intenta registrar ya existe\n");
                 break;
+            case ExisteSocioComoEntrenador:
+                printf("El documento ya se encuentra registrado como entrenador\n");
+                break;
             case NoExisteEntrenador:
                 printf("No existe un entrenador para la cedula ingresada\n");
                 break;
@@ -159,6 +163,7 @@ void procesarAltas(CapaLogica &capaLogica)
                 printf("La fecha ingresada no es valida\n");
                 break;
             }
+
             system("pause");
         }
         break;
@@ -211,7 +216,9 @@ void procesarListados(CapaLogica &capaLogica)
             while(iter.hayMasPersonas() == TRUE)
             {
                 Persona * personaMostrar = iter.proximaPersona();
-                personaMostrar -> mostrarBasico();
+
+                if(personaMostrar -> tipoPersona() == "socio") // por las dudas
+                    ((Socio*)personaMostrar) -> mostrarBasico();
             }
             printf("\n\n");
 
@@ -239,7 +246,10 @@ void procesarConsultas(CapaLogica &capaLogica)
     int opcionConsultas;
 
     long int cedula;
-    Socio * socio;
+
+    int dia;
+    int mes;
+    int anio;
 
     do
     {
@@ -261,7 +271,11 @@ void procesarConsultas(CapaLogica &capaLogica)
 
             Socio * s;
             capaLogica.devolverSocio(cedula, error, s);
-            socio -> mostrar();
+
+            if(error == NoExisteSocio)
+                printf("NO SE ENCONTRO SOCIO CON ESA CEDULA.\n");
+            else
+                s -> mostrar();
 
             system("pause");
             break;
@@ -271,7 +285,7 @@ void procesarConsultas(CapaLogica &capaLogica)
             printf("\n:: CALCULAR CUOTA MENSUAL PARA SOCIO ::\n\n");
 
             long int cedula;
-            printf("\nINGRESE UN MES (1-12)");
+            printf("\nINGRESE UN MES (1-12): ");
             int mes;
             scanf("%d",&mes);
 
@@ -309,11 +323,29 @@ void procesarConsultas(CapaLogica &capaLogica)
             break;
         }
         case 4:
+        {
             printf(":: CANTIDAD DE BECADOS POR FECHA ::\n\n");/*Contar cantidad becados con fechaOtorgada mayor a una fecha dada*/
             //pochi
 
+            printf("Ingerse la fecha a consultar:\n");
+
+            printf("Dia: ");
+            scanf("%d", &dia);
+
+            printf("Mes: ");
+            scanf("%d", &mes);
+
+            printf("Anio: ");
+            scanf("%d", &anio);
+
+            Fecha fecha(dia, mes, anio);
+
+            int cantidadBecados = capaLogica.contarBecadosPorFecha(fecha);
+            printf("A %d socios becados se les otorgó la beca luego de la fecha ingresada\n\n", cantidadBecados);
+
             system("pause");
             break;
+        }
         case 5:
         {
             printf(":: CANTIDAD DE ENTRENADORES POR FECHA Y PROMEDIO DE SALARIOS ::\n\n");
@@ -331,7 +363,7 @@ void procesarConsultas(CapaLogica &capaLogica)
             break;
         }
 
-    case 6:
+        case 6:
         {
             printf(":: SOCIO CON CUOTA MAS ALTA POR MES ::\n\n");/*Dado un mes, consultar en detalle el socio con la cuota mas alta*/
             //faus
@@ -355,17 +387,17 @@ void procesarConsultas(CapaLogica &capaLogica)
             break;
 
         }
-    case 0:
-        /*VOLVER*/
-        break;
-    default:
-        system("cls");
-        printf("OPCION INCORRECTA \n");
-        system("pause");
-        break;
+        case 0:
+            /*VOLVER*/
+            break;
+        default:
+            system("cls");
+            printf("OPCION INCORRECTA \n");
+            system("pause");
+            break;
+        }
     }
-}
-while (opcionConsultas != 0);
+    while (opcionConsultas != 0);
 }
 
 int main()

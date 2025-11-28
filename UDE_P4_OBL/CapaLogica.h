@@ -23,7 +23,7 @@ public:
     void devolverSocio(long int, tipoError &, Socio * &);
     float calcularCuotaSocio(int, tipoError &);
     float calcularCuotasTodos(int);
-    int cuantosBecadosDesdeFecha(Fecha);
+    int contarBecadosPorFecha(Fecha);
     void cuantosEntrenadoresYPromedioSalario(Fecha, int &, float &);
     void socioCuotaMayor(int, tipoError &, Socio * &);
     void cuantosEntrenadoresYPromedioSalario(int, int &, float &);

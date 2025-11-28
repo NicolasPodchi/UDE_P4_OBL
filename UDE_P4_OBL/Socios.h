@@ -3,6 +3,7 @@
 
 #include "Socio.h"
 #include "IterPersonas.h"
+#include "Becado.h"
 
 class Socios
 {
@@ -22,6 +23,7 @@ private:
     void cargarIterador (Nodo *, IterPersonas &);
     float CuotasTotalesEnArbol(Nodo * , int);
     Socio * socioMayorCuotaEnArbol (Nodo * , int);
+    int cuantosBecadosDesdeFecha(Nodo *, Fecha);
 
 public:
     Socios();
@@ -35,6 +37,8 @@ public:
 
     //Precondicion: Debe existir al menos un socio
     Socio * socioCuotaMayor(int);
+
+    int contarBecadosPorFecha(Fecha);
 };
 
 #endif // SOCIOS_H_INCLUDED

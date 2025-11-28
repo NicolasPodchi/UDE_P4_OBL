@@ -27,6 +27,12 @@ int Entrenador :: getAnio()
     return anioComienzo;
 }
 
+String Entrenador :: tipoPersona()
+{
+    String tipo("entrenador");
+    return tipo;
+}
+
 void Entrenador :: mostrar()
 {
     Persona :: mostrar();

@@ -31,7 +31,11 @@ void CapaLogica :: registrarSocio(Socio * nuevoSocio, long int cedulaEntrenador,
     {
         error = YaExisteSocio;
     }
-    else if(diccEntrenadores.member(cedulaEntrenador) == FALSE) //AGREGAR CONTROL DE QUE SOCIO NO EXISTA COMO ENTRENADOR
+    else if(diccEntrenadores.member(nuevoSocio -> getCedula()) == TRUE)
+    {
+        error = ExisteSocioComoEntrenador;
+    }
+    else if(diccEntrenadores.member(cedulaEntrenador) == FALSE)
     {
         error = NoExisteEntrenador;
     }
@@ -90,10 +94,11 @@ void CapaLogica :: devolverSocio(long int cedula, tipoError &error, Socio * &s)
     }
     else
     {
-        Socio * socio = diccSocios.Find(cedula);
+        s = diccSocios.Find(cedula);
         error = ok;
     }
 }
+
 float CapaLogica :: calcularCuotaSocio(int, tipoError &) {}
 
 
@@ -101,7 +106,12 @@ float CapaLogica :: calcularCuotasTodos(int mes)
 {
     return diccSocios.montoTotalCuotasMes(mes);
 }
-int CapaLogica :: cuantosBecadosDesdeFecha(Fecha) {}
+
+int CapaLogica :: contarBecadosPorFecha(Fecha f)
+{
+    return diccSocios.contarBecadosPorFecha(f);
+}
+
 void CapaLogica :: cuantosEntrenadoresYPromedioSalario(Fecha, int &, float &) {}
 
 void CapaLogica :: socioCuotaMayor(int mes, tipoError &error, Socio * &s)

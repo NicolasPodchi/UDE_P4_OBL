@@ -51,4 +51,5 @@ void Becado :: mostrar()
 
     printf("Fecha Otorgada: ");
     fechaOtorgada.imprimir();
+    printf("\n");
 }

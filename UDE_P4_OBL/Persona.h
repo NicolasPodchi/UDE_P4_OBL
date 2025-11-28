@@ -14,8 +14,9 @@ public :
     Persona (const Persona &);
     String getNombre();
     long int getCedula();
+    virtual String tipoPersona() = 0;
+
     //TIPO PERSONA IMPLEMENTAR
-    virtual void mostrarBasico() = 0;
     virtual void mostrar();
 };
 

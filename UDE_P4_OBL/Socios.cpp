@@ -190,8 +190,8 @@ int Socios :: cuantosBecadosDesdeFecha(Nodo * a, Fecha f)
             cantidadBecados += cuantosBecadosDesdeFecha(a -> hDer, f);
         }
 
-        return cantidadBecados;
     }
+        return cantidadBecados;
 }
 
 int Socios :: contarBecadosPorFecha(Fecha f)

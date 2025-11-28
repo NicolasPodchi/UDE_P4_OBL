@@ -201,7 +201,9 @@ void procesarListados(CapaLogica &capaLogica)
             while(iter.hayMasPersonas() == TRUE)
             {
                 Persona * personaMostrar = iter.proximaPersona();
-                personaMostrar -> mostrar();
+
+                if(personaMostrar->tipoPersona() == "entrenador")
+                    ((Entrenador *)personaMostrar) -> mostrar();
             }
             printf("\n");
             system("pause");
@@ -264,45 +266,46 @@ void procesarConsultas(CapaLogica &capaLogica)
 
             error = ok;
 
-            printf("\n\nIngrese los datos del nuevo socio:\n\n");
+            printf("Ingrese la cedula del socio:\n\n");
 
             printf("Cedula: ");
             scanf("%ld", &cedula);
+            printf("\n");
 
             Socio * s;
             capaLogica.devolverSocio(cedula, error, s);
 
             if(error == NoExisteSocio)
-                printf("NO SE ENCONTRO SOCIO CON ESA CEDULA.\n");
+                printf("NO SE ENCONTRO SOCIO CON ESA CEDULA\n");
             else
                 s -> mostrar();
-
+            printf("\n");
             system("pause");
             break;
         case 2:
         {
             tipoError error = ok;
-            printf("\n:: CALCULAR CUOTA MENSUAL PARA SOCIO ::\n\n");
+            printf(":: CALCULAR CUOTA MENSUAL PARA SOCIO ::\n\n");
 
             long int cedula;
-            printf("\nINGRESE UN MES (1-12): ");
+            printf("Ingrese un mes (1 al 12): ");
             int mes;
             scanf("%d",&mes);
 
 
-            printf("INGRESE LA CEDULA DEL SOCIO: ");
+            printf("Ingrese la cedula del socio: ");
             scanf("%ld", &cedula);
             Socio* socio = NULL;
             capaLogica.devolverSocio(cedula, error, socio);
 
             if (error==NoExisteSocio)
             {
-                printf("NO SE ENCONTRO SOCIO CON ESA CEDULA.\n");
+                printf("\nNO SE ENCONTRO SOCIO CON ESA CEDULA\n");
             }
             else
             {
                 float cuota = socio->calcularCuotaTotal(mes);
-                printf("\nLA CUOTA DEL MES %d PARA EL SOCIO %ld ES: %.2f\n\n", mes, cedula, cuota);
+                printf("\nLa cuota del mes %d para el socio %ld es de: $%.2f\n\n", mes, cedula, cuota);
             }
 
             system("pause");
@@ -318,7 +321,7 @@ void procesarConsultas(CapaLogica &capaLogica)
             printf("Ingrese un mes (1 al 12): ");
             scanf("%d", &mes);
             float total = capaLogica.calcularCuotasTodos(mes);
-            printf("\nEl monto total del mes %d es de: %.2f\n\n", mes, total);
+            printf("\nEl monto total de ingresos del mes %d es de: $%.2f\n\n", mes, total);
             system("pause");
             break;
         }
@@ -341,24 +344,24 @@ void procesarConsultas(CapaLogica &capaLogica)
             Fecha fecha(dia, mes, anio);
 
             int cantidadBecados = capaLogica.contarBecadosPorFecha(fecha);
-            printf("A %d socios becados se les otorgó la beca luego de la fecha ingresada\n\n", cantidadBecados);
+            printf("\nA %d socios becados se les otorgo la beca luego de la fecha ingresada\n\n", cantidadBecados);
 
             system("pause");
             break;
         }
         case 5:
         {
-            printf(":: CANTIDAD DE ENTRENADORES POR FECHA Y PROMEDIO DE SALARIOS ::\n\n");
+            printf(":: CANTIDAD DE ENTRENADORES A PARTIR DE ANIO Y PROMEDIO DE SALARIOS ::\n\n");
 
             int anio;
-            printf("INGRESE EL ANIO: ");
+            printf("Ingrese el anio: ");
             scanf("%d", &anio);
 
             int contador = 0;
             float promedio = 0.0;
             capaLogica.cuantosEntrenadoresYPromedioSalario(anio,contador,promedio);
-            printf(":: CANTIDAD DE ENTRENADORES %d \n PROMEDIO DE SUELDO: %.2f\n\n",contador, promedio);
-
+            printf("\nCantidad de entrenadores: %d\n",contador);
+            printf("Promedio de sueldos: $%.2f\n\n",promedio);
             system("pause");
             break;
         }

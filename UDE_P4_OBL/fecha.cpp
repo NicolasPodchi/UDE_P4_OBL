@@ -36,7 +36,7 @@ void Fecha :: incrementar ()
     case 6:
     case 9:
     case 11:
-        if(dia == 31)
+        if(dia == 30)
         {
             dia = 1;
             mes ++;
@@ -134,6 +134,31 @@ bool Fecha::operator<(Fecha f)
     return menor;
 }
 
+bool Fecha::operator<=(Fecha f)
+{
+    bool menorIgual = false;
+
+    if (anio < f.anio)
+    {
+        menorIgual = true;
+    }
+    else if (anio == f.anio)
+    {
+        if (mes < f.mes)
+        {
+            menorIgual = true;
+        }
+        else if (mes == f.mes)
+        {
+            if (dia <= f.dia)
+            {
+                menorIgual = true;
+            }
+        }
+    }
+
+    return menorIgual;
+}
 
 bool Fecha :: operator== (Fecha f)
 {
@@ -217,6 +242,7 @@ bool Fecha :: esValida ()
             if(dia<1||dia>28)
                 valido = false;
         }
+        break;
     default:
         valido = false;
     }

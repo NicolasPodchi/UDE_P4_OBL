@@ -112,8 +112,6 @@ int CapaLogica :: contarBecadosPorFecha(Fecha f)
     return diccSocios.contarBecadosPorFecha(f);
 }
 
-void CapaLogica :: cuantosEntrenadoresYPromedioSalario(Fecha, int &, float &) {}
-
 void CapaLogica :: socioCuotaMayor(int mes, tipoError &error, Socio * &s)
 {
     if(diccSocios.Empty() == TRUE)

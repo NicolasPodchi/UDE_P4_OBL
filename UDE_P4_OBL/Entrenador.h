@@ -17,7 +17,6 @@ public:
     int getAnio();
     String tipoPersona();
 
-    void mostrarBasico();
     void mostrar();
 
     //DESTRUCTORES EN TODOS

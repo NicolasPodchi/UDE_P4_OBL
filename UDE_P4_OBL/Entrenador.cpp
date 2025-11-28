@@ -41,9 +41,6 @@ void Entrenador :: mostrar()
     printf(" | ");
 
     printf("Anio ingreso: %d", anioComienzo);
+    printf("\n");
 
-}
-
-void Entrenador :: mostrarBasico() //borrar dejarlo en socio nomas
-{
 }

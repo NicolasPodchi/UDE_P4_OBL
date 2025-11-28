@@ -17,6 +17,7 @@ public:
     int getMes ();
     int getAnio ();
     bool operator< (Fecha);
+    bool operator<=(Fecha);
     bool operator== (Fecha);
     Fecha operator++ ();
     Fecha operator++ (int);

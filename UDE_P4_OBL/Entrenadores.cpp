@@ -131,6 +131,8 @@ void Entrenadores :: listarEntrenadores(IterPersonas &iter)
     }
 }
 
+
+
 void Entrenadores::ChequearAnioYPromedio (Nodo * l, int anio, float &suma, int &cant)
 {
     while (l!=NULL)
@@ -151,6 +153,13 @@ void Entrenadores::recorrerEntrenadorAnioYpromedio(int anio, int &cant, float &p
     {
         ChequearAnioYPromedio(Hash[i], anio, prom, cant);
     }
-    prom = prom/cant;
+    if(cant==0)
+    {
+        prom = 0;
+    }
+    else
+    {
+        prom = prom/cant;
+    }
 }
 

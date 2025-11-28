@@ -43,7 +43,7 @@ void mostrarMenuConsultas (int &opcion)
     printf("\n2 - Calcular cuota mensual para socio");
     printf("\n3 - Calcular total e ingresos por mes");
     printf("\n4 - Cantidad de becados por fecha");
-    printf("\n5 - Cantidad de entrenadores por fecha y promedio de salarios");
+    printf("\n5 - Cantidad de entrenadores por anio y promedio de salarios");
     printf("\n6 - Socio con cuota mas alta por mes");
     printf("\n\n0 - Volver");
 
